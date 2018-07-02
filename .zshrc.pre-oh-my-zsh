@@ -1,0 +1,6 @@
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:/Users/hasankatie/bin"
+export HOMEBREW_GITHUB_API_TOKEN="964759bfaea525378749fbd3171d8cd1475fcf40"
+source "$(brew --prefix)/etc/profile.d/z.sh"
+source "/Users/hasankatie/bin/mkcd.sh"
+big && tmux
