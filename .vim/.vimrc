@@ -8,37 +8,19 @@ let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_char = '│'
 let delimitMate_expand_cr = 2
 let main_sytax='C'
-let g:clang_library_path="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/"
 set number
 set cursorline
 set list
 set listchars=tab:>-,trail:·
-set rtp+=/usr/local/opt/fzf
+"set rtp+=/usr/local/opt/fzf
 
-match ErrorMsg '\%>120v.\+'
-match ErrorMsg '\s\+$'
+"match ErrorMsg '\%>120v.\+'
+"match ErrorMsg '\s\+$'
 
 "super tab settings
-"let g:SuperTabDefaultCompletionType = 'context'
-"let g:SuperTabLongestHighlight = 1
+let g:SuperTabLongestHighlight = 0
 "let g:SuperTabClosePreviewOnPopupClose = 1
-"let g:SuperTabRetainCompletionDuration = 'session'
-"let g:SuperTabLongestEnhanced = 1
-"let g:SuperTabClosePreviewOnPopupClose = 1
-"set pumheight=10             " so the complete menu doesn't get too big
-"set completeopt=menu,longest " menu, menuone, longest and preview
-"let g:SuperTabDefaultCompletionType='context'
-"
-"
-"
-"let g:clang_complete_auto=0  " I can start the autocompletion myself, thanks..
-"let g:clang_snippets=0       " use a snippet engine for placeholders
-"let g:clang_snippets_engine='ultisnips'
-"let g:clang_auto_select=1    " automatically select and insert the first match"
-"let g:clang_snippets=0
-
-
-" clang complete options copied from the internet
+let g:SuperTabRetainCompletionDuration = 'session'
 
 function DelayScreenClear()
     sleep 500m
