@@ -1,21 +1,22 @@
 export MANPATH="/usr/local/man:$MANPATH"
-export PATH="$PATH":/Users/hasankatie/bin
-export PKG_CONFIG_PATH=/Library/Frameworks/Mono.framework/Versions/5.4.1/lib/pkgconfig/
-big
+export PATH="$PATH":$HOME/bin
+export PATH="$PATH":$HOME/bin/priv/bin
+export PI=pi@192.168.1.76
+os=$(uname)
+if [[ $os == "Darwin" ]]; then
+    export PATH="$PATH":$HOME/bin/mac/bin
+    export PKG_CONFIG_PATH=/Library/Frameworks/Mono.framework/Versions/5.4.1/lib/pkgconfig/
+    export HOMEBREW_GITHUB_API_TOKEN="79f12d845ea19057934bf1dbac39938c43e196b4"
+    big
+else
+    #else assume os is linux
+    export PATH="$PATH":$HOME/bin/linux/bin
+fi
 ZSH_TMUX_AUTOSTART="true"
 ZSH_TMUX_AUTOSTART_ONCE="true"
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/hasankatie/.oh-my-zsh
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-
-export PI=pi@192.168.1.76
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -73,7 +74,8 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
+source $HOME/bin/shell_functions.sh
+source $HOME/bin/git_functions.sh
 # User configuration
 
 
@@ -104,9 +106,6 @@ export EDITOR='vim'
 alias p3=python3
 
 #mkcd command
-source "/Users/hasankatie/bin/shell_functions.sh"
-unset MALLOC_PERTURB_
 
-#delete the occurence of a path then replace it back so that that version of ruby will be called by default
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 setopt extended_glob
