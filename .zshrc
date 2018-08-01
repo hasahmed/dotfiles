@@ -71,6 +71,7 @@ plugins=(
   git
   tmux
   osx
+  catimg
 )
 
 source $ZSH/oh-my-zsh.sh
