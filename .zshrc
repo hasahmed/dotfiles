@@ -1,6 +1,7 @@
 export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$PATH":$HOME/bin
 export PATH="$PATH":$HOME/bin/priv/bin
+export PATH="$PATH":/usr/local/bin/
 export PI=pi@192.168.1.76
 os=$(uname)
 if [[ $os == "Darwin" ]]; then
@@ -12,8 +13,6 @@ else
     #else assume os is linux
     export PATH="$PATH":$HOME/bin/linux/bin
 fi
-ZSH_TMUX_AUTOSTART="true"
-ZSH_TMUX_AUTOSTART_ONCE="true"
 
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
@@ -86,7 +85,6 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/bin/shell_functions.sh
 source $HOME/bin/git_functions.sh
 # User configuration
-
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
