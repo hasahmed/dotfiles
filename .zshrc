@@ -74,7 +74,6 @@ plugins=(
   ruby
   npm
   node
-  brew
   python
   pip
   rails
