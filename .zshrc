@@ -69,9 +69,17 @@ HYPHEN_INSENSITIVE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  catimg
   tmux
   osx
-  catimg
+  ruby
+  npm
+  node
+  brew
+  python
+  pip
+  rails
+  gem
 )
 
 source $ZSH/oh-my-zsh.sh
