@@ -8,18 +8,19 @@ let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_char = '│'
 let delimitMate_expand_cr = 2
 let main_sytax='C'
-let g:clang_library_path="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/"
 set number
 set cursorline
 set list
 set listchars=tab:>-,trail:·
-set rtp+=/usr/local/opt/fzf
+"set rtp+=/usr/local/opt/fzf
 
-match ErrorMsg '\%>120v.\+'
-match ErrorMsg '\s\+$'
+"match ErrorMsg '\%>120v.\+'
+"match ErrorMsg '\s\+$'
 
-
-" clang complete options copied from the internet
+"super tab settings
+let g:SuperTabLongestHighlight = 0
+"let g:SuperTabClosePreviewOnPopupClose = 1
+let g:SuperTabRetainCompletionDuration = 'session'
 
 function DelayScreenClear()
     sleep 500m
@@ -27,14 +28,13 @@ function DelayScreenClear()
 endfunction
 
 
-set pumheight=10             " so the complete menu doesn't get too big
-set completeopt=menu,longest " menu, menuone, longest and preview
-let g:SuperTabDefaultCompletionType='context'
-let g:clang_complete_auto=1  " I can start the autocompletion myself, thanks..
-let g:clang_snippets=1       " use a snippet engine for placeholders
-let g:clang_snippets_engine='ultisnips'
-let g:clang_auto_select=1    " automatically select and insert the first match"
-let g:clang_snippets=1
+
+"vim-ruby configurations
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_classes_in_global = 1
+let g:rubycomplete_rails = 1
+let g:rubycomplete_load_gemfile = 1
+let ruby_space_errors = 1
 
 
 "mappings for saving files with F10-12
@@ -86,7 +86,7 @@ colorscheme monokai
 
 
 "vim markdown preview
-let vim_markdown_preview_github=1
+"let vim_markdown_preview_github=1
 "au BufReadPost *.rkt, *.rktl set filetype=scheme
 
 " au BufReadPost,BufNewFile *.php colorscheme monokai
