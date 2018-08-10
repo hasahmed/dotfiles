@@ -11,7 +11,7 @@ let main_sytax='C'
 set number
 set cursorline
 set list
-set listchars=tab:>-,trail:·
+"set listchars=tab:>-,trail:·
 "set rtp+=/usr/local/opt/fzf
 
 "match ErrorMsg '\%>120v.\+'
