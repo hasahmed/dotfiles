@@ -1,1 +1,0 @@
-/home/hasan/.dotfiles/.vim
