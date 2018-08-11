@@ -1,1 +1,1 @@
-/Users/hasankatie/.dotfiles/.vim
+/home/hasan/.dotfiles/.vim

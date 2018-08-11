@@ -1,6 +1,6 @@
 #!/bin/bash
 #oh-my-zsh setup
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh get-oh-my-zsh.sh
 git submodule init
 git submodule update --recursive
 ln -sFi $HOME/.dotfiles/.zshrc $HOME/.zshrc
