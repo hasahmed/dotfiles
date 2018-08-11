@@ -14,7 +14,8 @@ else
     if [[ ! $DISPLAY ]]; then
         exec startx
     fi
-
+    #linux aliases
+    alias pmi="sudo pacman -S"
     export PATH="$PATH":$HOME/bin/linux/bin
 fi
 
@@ -84,6 +85,9 @@ plugins=(
   gem
 )
 
+#ZSH_TMUX_AUTO_START="true"
+#ZSH_TMUX_AUTO_START_ONCE="true"
+
 source $ZSH/oh-my-zsh.sh
 source $HOME/bin/shell_functions.sh
 source $HOME/bin/git_functions.sh
@@ -113,9 +117,18 @@ export EDITOR='vim'
 #
 # Example aliases
 #alias sharedir="pwd > $HOME/.sharedir"
+#global aliases
 alias p3=python3
+alias tmux="tmux -u"
 
 #mkcd command
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 setopt extended_glob
+
+
+
+# start tmux if it isn't started already
+if ! tmux info &> /dev/null; then
+    tmux
+fi

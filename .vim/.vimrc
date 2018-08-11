@@ -73,6 +73,9 @@ nnoremap <space> i<space><esc>
 autocmd BufReadPost,BufNewFile *.rb setlocal shiftwidth=2 tabstop=2
 
 colorscheme monokai
+hi link javaScriptTemplateDelim String
+hi link javaScriptTemplateVar Text
+hi link javaScriptTemplateString String
 
 "au BufReadPost,BufNewFile *.twig colorscheme koehler
 "au BufReadPost,BufNewFile *.css colorscheme slate
