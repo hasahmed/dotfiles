@@ -11,11 +11,10 @@ if [[ $os == "Darwin" ]]; then
     big
 else
     #else assume os is linux
-
-    if ! xset q &>/dev/null; then
-        echo "No X server at \$DISPLAY [$DISPLAY]" >&2
-        exit 1
+    if [[ ! $DISPLAY ]]; then
+        exec startx
     fi
+
     export PATH="$PATH":$HOME/bin/linux/bin
 fi
 
