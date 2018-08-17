@@ -11,11 +11,6 @@ let main_sytax='C'
 set number
 set cursorline
 set list
-"set listchars=tab:>-,trail:·
-"set rtp+=/usr/local/opt/fzf
-
-"match ErrorMsg '\%>120v.\+'
-"match ErrorMsg '\s\+$'
 
 "super tab settings
 let g:SuperTabLongestHighlight = 0
@@ -35,6 +30,10 @@ let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 let g:rubycomplete_load_gemfile = 1
 let ruby_space_errors = 1
+
+
+"set case insensitive search
+set ignorecase
 
 
 "mappings for saving files with F10-12
@@ -79,20 +78,3 @@ colorscheme monokai
 hi link javaScriptTemplateDelim String
 hi link javaScriptTemplateVar Text
 hi link javaScriptTemplateString String
-
-"au BufReadPost,BufNewFile *.twig colorscheme koehler
-"au BufReadPost,BufNewFile *.css colorscheme slate
-"au BufReadPost,BufNewFile *.js colorscheme slate2
-"au BufReadPost,BufNewFile *.py colorscheme molokaiyo
-"au BufReadPost,BufNewFile *.html colorscheme monokai
-"au BufReadPost,BufNewFile *.c colorscheme monokai
-"au BufReadPost,BufNewFile *.cpp colorscheme monokai
-"au BufReadPost,BufNewFile *.java colorscheme monokai
-"au BufReadPost,BufNewFile *.* colorscheme monokai
-
-
-"vim markdown preview
-"let vim_markdown_preview_github=1
-"au BufReadPost *.rkt, *.rktl set filetype=scheme
-
-" au BufReadPost,BufNewFile *.php colorscheme monokai
