@@ -17,6 +17,7 @@ else
     #linux aliases
     alias pmi="sudo pacman -S"
     export PATH="$PATH":$HOME/bin/linux/bin
+    wifi-connect
 fi
 
 export ZSH=$HOME/.oh-my-zsh
@@ -120,6 +121,10 @@ export EDITOR='vim'
 #global aliases
 alias p3=python3
 alias tmux="tmux -u"
+
+
+# unset LESS disables pager for commands like git branch
+unset LESS
 
 #mkcd command
 
