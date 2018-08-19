@@ -16,6 +16,7 @@ else
     fi
     #linux aliases
     alias pmi="sudo pacman -S"
+    alias pms="pacman -Qil"
     export PATH="$PATH":$HOME/bin/linux/bin
     sudo wifi-connect
 fi
