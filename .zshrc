@@ -17,7 +17,7 @@ else
     #linux aliases
     alias pmi="sudo pacman -S"
     export PATH="$PATH":$HOME/bin/linux/bin
-    wifi-connect
+    sudo wifi-connect
 fi
 
 export ZSH=$HOME/.oh-my-zsh
