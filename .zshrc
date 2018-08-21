@@ -12,7 +12,8 @@ if [[ $os == "Darwin" ]]; then
 else
     #else assume os is linux
     if [[ ! $DISPLAY ]]; then
-        exec startx
+        echo "Loading..."
+        exec startx 2&> /dev/null
     fi
     #linux aliases
     alias pmi="sudo pacman -S"
