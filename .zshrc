@@ -12,12 +12,14 @@ if [[ $os == "Darwin" ]]; then
 else
     #else assume os is linux
     if [[ ! $DISPLAY ]]; then
-        exec startx
+        echo "Loading..."
+        exec startx 2&> /dev/null
     fi
     #linux aliases
     alias pmi="sudo pacman -S"
+    alias pms="pacman -Qil"
     export PATH="$PATH":$HOME/bin/linux/bin
-    wifi-connect
+    sudo wifi-connect
 fi
 
 export ZSH=$HOME/.oh-my-zsh
