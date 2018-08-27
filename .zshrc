@@ -6,7 +6,8 @@ export PI=pi@192.168.1.76
 os=$(uname)
 if [[ $os == "Darwin" ]]; then
     export PATH="$PATH":$HOME/bin/mac/bin
-    export PKG_CONFIG_PATH=/Library/Frameworks/Mono.framework/Versions/5.4.1/lib/pkgconfig/
+    export MANPATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/share/man:$MANPATH"
+    export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/Library/Frameworks/Mono.framework/Versions/5.4.1/lib/pkgconfig/"
     export HOMEBREW_GITHUB_API_TOKEN="79f12d845ea19057934bf1dbac39938c43e196b4"
     big
 else
