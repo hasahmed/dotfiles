@@ -11,6 +11,7 @@ let main_sytax='C'
 set number
 set cursorline
 set list
+set colorcolumn=82
 
 "super tab settings
 let g:SuperTabLongestHighlight = 0
