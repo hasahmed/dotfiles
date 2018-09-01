@@ -73,7 +73,15 @@ vnoremap <A-K> :m '<-2<CR>gv=gv
 nnoremap <space> i<space><esc>
 
 "set ruby's tabwidth to 2
-autocmd BufReadPost,BufNewFile *.rb setlocal shiftwidth=2 tabstop=2
+autocmd BufReadPost,BufNewFile *.rb setlocal expandtab softtabstop=2 shiftwidth=2 tabstop=2
+autocmd BufReadPost,BufNewFile *.html setlocal expandtab softtabstop=2 shiftwidth=2 tabstop=2
+autocmd BufReadPost,BufNewFile *.coffee setlocal expandtab softtabstop=2 shiftwidth=2 tabstop=2
+autocmd BufReadPost,BufNewFile *.pug setlocal expandtab softtabstop=2 shiftwidth=2 tabstop=2
+autocmd BufReadPost,BufNewFile *.jade setlocal expandtab softtabstop=2 shiftwidth=2 tabstop=2
+"autocmd FileType html setlocal shiftwidth=2 tabstop=2
+"autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
+"autocmd FileType pug setlocal shiftwidth=2 tabstop=2
+"autocmd FileType jade setlocal shiftwidth=2 tabstop=2
 
 colorscheme monokai
 hi link javaScriptTemplateDelim String

@@ -126,6 +126,7 @@ export EDITOR='vim'
 #global aliases
 alias p3=python3
 alias tmux="tmux -u"
+alias cat=bat
 
 
 # unset LESS disables pager for commands like git branch
