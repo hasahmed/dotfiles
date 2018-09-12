@@ -35,7 +35,8 @@ let ruby_space_errors = 1
 
 "set case insensitive search
 set ignorecase
-
+"will do case-sensitive search if any capital letters are input
+set smartcase
 
 "mappings for saving files with F10-12
 map <silent><F9> :wa<CR>:echo'SAVED at: '.strftime('%T')<CR>:call DelayScreenClear()<CR>

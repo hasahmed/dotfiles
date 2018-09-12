@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/vim-less"]
 	path = .vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
+[submodule ".vim/bundle/CamelCaseMotion"]
+	path = .vim/bundle/CamelCaseMotion
+	url = https://github.com/bkad/CamelCaseMotion.git
