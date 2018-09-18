@@ -127,6 +127,8 @@ export EDITOR='vim'
 alias p3=python3
 alias tmux="tmux -u"
 alias cat=bat
+alias superclear="echo {0..1000} | tr [:digit:] '\n' && clear"
+alias clear=superclear
 
 
 # unset LESS disables pager for commands like git branch
