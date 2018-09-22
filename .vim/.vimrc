@@ -79,6 +79,7 @@ autocmd BufReadPost,BufNewFile *.html setlocal expandtab softtabstop=2 shiftwidt
 autocmd BufReadPost,BufNewFile *.coffee setlocal expandtab softtabstop=2 shiftwidth=2 tabstop=2
 autocmd BufReadPost,BufNewFile *.pug setlocal expandtab softtabstop=2 shiftwidth=2 tabstop=2
 autocmd BufReadPost,BufNewFile *.jade setlocal expandtab softtabstop=2 shiftwidth=2 tabstop=2
+autocmd BufReadPost,BufNewFile *.ts setlocal expandtab softtabstop=2 shiftwidth=2 tabstop=2
 "autocmd FileType html setlocal shiftwidth=2 tabstop=2
 "autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 "autocmd FileType pug setlocal shiftwidth=2 tabstop=2

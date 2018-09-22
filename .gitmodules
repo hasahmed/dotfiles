@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/typescript-vim"]
 	path = .vim/bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule ".vim/bundle/python-syntax"]
+	path = .vim/bundle/python-syntax
+	url = https://github.com/hdima/python-syntax.git

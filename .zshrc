@@ -149,3 +149,4 @@ fi
 #nvm command
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
+nvm use default &> /dev/null
