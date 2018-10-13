@@ -10,6 +10,7 @@ if [[ $os == "Darwin" ]]; then
     export MANPATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/share/man:$MANPATH"
     export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/Library/Frameworks/Mono.framework/Versions/5.4.1/lib/pkgconfig/"
     export HOMEBREW_GITHUB_API_TOKEN="79f12d845ea19057934bf1dbac39938c43e196b4"
+    export HOMEBREW_NO_AUTO_UPDATE=1
     big
 else
     #else assume os is linux
@@ -129,6 +130,9 @@ alias tmux="tmux -u"
 alias cat=bat
 alias superclear="echo {0..1000} | tr [:digit:] '\n' && clear"
 alias clear=superclear
+alias gpvsu="git push --set-upstream origin master"
+alias rm="echo use rmtrash or /bin/rm if you really need it"
+alias rmt=rmtrash
 
 
 # unset LESS disables pager for commands like git branch
