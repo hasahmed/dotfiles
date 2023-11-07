@@ -85,7 +85,11 @@ autocmd BufReadPost,BufNewFile *.ts setlocal expandtab softtabstop=2 shiftwidth=
 "autocmd FileType pug setlocal shiftwidth=2 tabstop=2
 "autocmd FileType jade setlocal shiftwidth=2 tabstop=2
 
-colorscheme monokai
+colorscheme molokai
 hi link javaScriptTemplateDelim String
 hi link javaScriptTemplateVar Text
 hi link javaScriptTemplateString String
+
+" Disable annoying beeping
+set noerrorbells
+set vb t_vb=
