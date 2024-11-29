@@ -13,7 +13,7 @@ setup_env () {
 
     #only bash
     if [ $env = "bash" ]; then
-        echo ./$rc_file >> $HOME/$rc_file
+        cat ./$rc_file >> $HOME/$rc_file
     else
         #only zsh
         sh get-oh-my-zsh.sh
@@ -21,6 +21,6 @@ setup_env () {
         ln -sFi $HOME/.dotfiles/oh-my-zsh $HOME/.oh-my-zsh
     fi
 
-    echo ./aliases-$env.txt >> $HOME/$rc_file
-    echo ./aliases-general.txt >> $HOME/$rc_file
+    cat ./aliases-$env.txt >> $HOME/$rc_file
+    cat ./aliases-general.txt >> $HOME/$rc_file
 }
