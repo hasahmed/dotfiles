@@ -23,4 +23,6 @@ setup_env () {
 
     cat ./aliases-$env.txt >> $HOME/$rc_file
     cat ./aliases-general.txt >> $HOME/$rc_file
+
+    . $HOME/$rc_file
 }
