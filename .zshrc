@@ -1,30 +1,6 @@
 export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$PATH":$HOME/bin
-export PATH="$PATH":$HOME/bin/priv/bin
 export PATH="$PATH":/usr/local/bin/
-export PI=pi@192.168.1.76
-os=$(uname)
-if [[ $os == "Darwin" ]]; then
-    export PATH="$PATH":$HOME/bin/mac/bin
-    export PATH="$PATH":/usr/local/sbin
-    export MANPATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/share/man:$MANPATH"
-    export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/Library/Frameworks/Mono.framework/Versions/5.4.1/lib/pkgconfig/"
-    export HOMEBREW_GITHUB_API_TOKEN="79f12d845ea19057934bf1dbac39938c43e196b4"
-    export HOMEBREW_NO_AUTO_UPDATE=1
-    big
-else
-    #else assume os is linux
-    if [[ ! $DISPLAY ]]; then
-        echo "Loading..."
-        exec startx 2&> /dev/null
-    fi
-    #linux aliases
-    alias pmi="sudo pacman -S"
-    alias pms="pacman -Qil"
-    export PATH="$PATH":$HOME/bin/linux/bin
-    sudo wifi-connect
-fi
-
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 

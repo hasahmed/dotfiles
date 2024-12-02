@@ -3,8 +3,9 @@
 ; Remap Ctrl-Tab to Alt-Tab
 <^Tab::AltTab
 <^j::AltTab
+<^h::~
 
-<^y::{
+CycleSameWindow() {
   OldClass := WinGetClass("A")
   ActiveProcessName := WinGetProcessName("A")
   WinClassCount := WinGetCount("ahk_exe" ActiveProcessName)
@@ -17,4 +18,15 @@
     if (OldClass != "CabinetWClass" or NewClass = "CabinetWClass")
       break
   }
+}
+
+<^g::CycleSameWindow
+
+HotIfWinNotActive "ahk_exe chrome.exe"
+Hotkey "^l", SendTab
+HotIfWinNotActive
+
+SendTab(HotkeyName)
+{
+    SendInput("{Tab}")
 }
