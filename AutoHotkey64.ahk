@@ -3,6 +3,7 @@
 ; Remap Ctrl-Tab to Alt-Tab
 <^Tab::AltTab
 <^j::AltTab
+<!j::AltTab
 <^h::~
 
 CycleSameWindow() {
