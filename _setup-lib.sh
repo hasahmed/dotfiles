@@ -23,6 +23,7 @@ setup_env () {
 
     cat ./aliases-$env.txt >> $HOME/$rc_file
     cat ./aliases-general.txt >> $HOME/$rc_file
+    curl -Ls get.dannyb.co/fuzzycd/setup | bash
 
     . $HOME/$rc_file
 }
