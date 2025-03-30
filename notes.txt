@@ -1,0 +1,7 @@
+might be nice to make some distictions for different systems.
+
+
+Superclear doesn't work on linux.
+
+
+Also, probably shouldn't maintain bash and zsh configs

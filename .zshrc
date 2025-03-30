@@ -57,7 +57,6 @@ plugins=(
   git
   catimg
   tmux
-  osx
   ruby
   npm
   node
@@ -72,8 +71,6 @@ plugins=(
 #ZSH_TMUX_AUTO_START_ONCE="true"
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/bin/shell_functions.sh
-source $HOME/bin/git_functions.sh
 # User configuration
 
 # You may need to manually set your language environment
@@ -104,21 +101,23 @@ export EDITOR='vim'
 alias p3=python3
 alias tmux="tmux -u"
 alias cat=bat
-alias superclear="echo {0..1000} | tr [:digit:] '\n' && clear"
-alias clear=superclear
 alias gpvsu="git push --set-upstream origin master"
-alias rm="echo use rmtrash or /bin/rm if you really need it"
-alias rmt=rmtrash
 
 
 # unset LESS disables pager for commands like git branch
 unset LESS
 
-#mkcd command
+alias chrome='/opt/google/chrome/chrome'
+alias grvc="grv | head -1 | sed 's/^origin//' | sed 's/(fetch)//'"
+
+function gro {
+    chrome $(grvc)
+}
+
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 setopt extended_glob
-
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 
 # start tmux if it isn't started already
@@ -130,3 +129,15 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
 nvm use default &> /dev/null
+alias gs='git status'
+alias gb='git branch'
+alias gcb='git checkout -b'
+alias gaa='git add -A'
+alias gcmsg='git commit -m'
+alias grv='git remote -v'
+alias gs='git status'
+alias gb='git branch'
+alias gcb='git checkout -b'
+alias gaa='git add -A'
+alias gcmsg='git commit -m'
+alias grv='git remote -v'
