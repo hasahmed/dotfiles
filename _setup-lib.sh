@@ -5,6 +5,7 @@ setup_env () {
         env="zsh"
         rc_file=".zshrc"
     fi
+    echo "" >> $rc_file
     git submodule init
     git submodule update --recursive
     ln -sFi $HOME/.dotfiles/.vim $HOME/.vim
